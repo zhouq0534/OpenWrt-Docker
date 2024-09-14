@@ -125,8 +125,13 @@ jobs:
         run: |
           tar -xJf *.tar.xz
           cd immortalwrt-imagebuilder-$DEVICE_VERSION-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
+          echo 'source code:'
+          cat $GITHUB_WORKSPACE/files/repositories.conf
+          echo 'dest before code:'
+          cat repositories.conf
           cp -rf $GITHUB_WORKSPACE/files .
-          cat ./repositories.conf
+          echo 'dest code:'
+          cat repositories.conf
           chmod +x files/etc/rc.local
 
       - name: Build RootFS (amd64)
