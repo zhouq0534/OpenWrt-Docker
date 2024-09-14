@@ -135,6 +135,8 @@ jobs:
 
           ls -an
 
+          ls -an ./packages
+
           
 
       - name: Build RootFS (amd64)
