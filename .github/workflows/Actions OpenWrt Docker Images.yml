@@ -125,7 +125,7 @@ jobs:
         run: |
           tar -xJf *.tar.xz
           cd immortalwrt-imagebuilder-$DEVICE_VERSION-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
-          sed -e 13a\src/gz kenzo https://op.dllkids.xyz/packages/x86_64/ ./repositories.conf
+          sed -e '13a\src/gz kenzo https://op.dllkids.xyz/packages/x86_64' ./repositories.conf
           cat ./repositories.conf
           cp -rf $GITHUB_WORKSPACE/files .
           chmod +x files/etc/rc.local
