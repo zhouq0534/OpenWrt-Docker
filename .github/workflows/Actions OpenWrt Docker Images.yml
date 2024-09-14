@@ -27,6 +27,7 @@ jobs:
     name: Generate Config
     runs-on: ubuntu-latest
     outputs:
+
       TARGETS: ${{ steps.find-targets.outputs.TARGETS }}
 
     steps:
@@ -130,7 +131,7 @@ jobs:
           chmod +x $GITHUB_WORKSPACE/files/repositories.conf
           
           
-          cp -rf $GITHUB_WORKSPACE/files/ .
+          cp -rf $GITHUB_WORKSPACE/files/* .
 
           
 
