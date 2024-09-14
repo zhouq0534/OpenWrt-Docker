@@ -126,18 +126,12 @@ jobs:
           tar -xJf *.tar.xz
           cd immortalwrt-imagebuilder-$DEVICE_VERSION-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
           
-          echo 'source code:'
-          cat $GITHUB_WORKSPACE/files/repositories.conf
+          chmod +x $GITHUB_WORKSPACE/files/
           
-          echo 'dest before code:'
-          cat repositories.conf
+          
           cp -rf $GITHUB_WORKSPACE/files .
 
-          chmod +x $GITHUB_WORKSPACE/files/repositories.conf
-          cp -rf $GITHUB_WORKSPACE/files/repositories.conf ./repositories.conf
           
-          echo 'dest code:'
-          cat repositories.conf
 
       - name: Build RootFS (amd64)
         if: env.DOCKER_EXTERA_TAG == 'amd64'
