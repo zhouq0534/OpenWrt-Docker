@@ -127,8 +127,8 @@ jobs:
           tar -xJf *.tar.xz
           cd immortalwrt-imagebuilder-$DEVICE_VERSION-$DEVICE_TARGET-$DEVICE_SUBTARGET.Linux-x86_64
           
-          chmod +x $GITHUB_WORKSPACE/files/packages/*.ipk
-          chmod +x $GITHUB_WORKSPACE/files/repositories.conf
+          # chmod +x $GITHUB_WORKSPACE/files/packages/*.ipk
+          # chmod +x $GITHUB_WORKSPACE/files/repositories.conf
           
           
           cp -rf $GITHUB_WORKSPACE/files/* .
