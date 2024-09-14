@@ -130,7 +130,7 @@ jobs:
           chmod +x $GITHUB_WORKSPACE/files/repositories.conf
           
           
-          cp -rf $GITHUB_WORKSPACE/files .
+          cp -rf $GITHUB_WORKSPACE/files/ .
 
           
 
